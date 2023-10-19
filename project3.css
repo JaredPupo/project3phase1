@@ -51,6 +51,7 @@ input[type="submit"] {
     border: none;
     border-radius: 3px;
     cursor: pointer;
+    transition-duration: 0.4s;
 }
 
 input[type="submit"]:hover {
@@ -64,9 +65,9 @@ button {
     border: none;
     border-radius: 3px;
     cursor: pointer;
+    transition-duration: 0.4s;
 }
 button:hover {
-    width: 50%;
     padding: 10px;
     background-color: #ff0000;
     color: #fff;
@@ -74,6 +75,60 @@ button:hover {
     border-radius: 3px;
     cursor: pointer;
 }
+
+#logoutButton{width: 5%;}
+
 li {
     text-align: center;
 }
+
+#message {
+    margin-top: 5%;
+    color: red;
+    text-align: center;
+    font-size: large;
+}
+
+#footer{
+    background-color: #000000;
+    color: #fff;
+    max-width: 100%;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: .5%;
+}
+
+#next{
+    background-color: #000000;
+    color: #fff;
+    transition-duration: 0.4s;
+    padding: auto;
+    float: inline-end;
+}
+
+#next:hover{background-color: #ff0000;}
+
+#prev{
+    background-color: #000000;
+    color: #fff;
+    padding: auto;
+    transition-duration: 0.4s;
+}
+
+#prev:hover{background-color: #ff0000;}
+
+#fileLabel{
+    width: auto;
+    top: 10px;
+    position: relative;
+    left: 40%;
+}
+.buttonStyle{
+    width: auto;
+    top: 10px;
+    position: relative;
+    left: 40%;
+}
+
