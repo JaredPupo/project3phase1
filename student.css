@@ -1,0 +1,41 @@
+#next{
+    background-color: #000000;
+    color: #fff;
+    transition-duration: 0.4s;
+    padding: auto;
+    float: inline-end;
+}
+
+#next:hover{background-color: #ff0000;}
+
+#prev{
+    background-color: #000000;
+    color: #fff;
+    padding: auto;
+    transition-duration: 0.4s;
+}
+
+#prev:hover{background-color: #ff0000;}
+
+.fileLabel{
+    width: auto;
+}
+.buttonStyle{
+    width: auto;
+    top: 10px;
+    position: relative;
+    left: 40%;
+}
+
+#courses, #enrolledCourses{ display: block;}
+
+a:hover{color: goldenrod;}
+
+.prevP{width: auto;}
+
+.quizzButton{
+    width: auto;
+    top: 10px;
+    position: relative;
+    left: 40%;
+}
