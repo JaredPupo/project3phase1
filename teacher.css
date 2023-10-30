@@ -1,49 +1,59 @@
-#next{
-    background-color: #000000;
-    color: #fff;
-    transition-duration: 0.4s;
-    padding: auto;
-    float: inline-end;
+#addCourseModal {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+}
+#editCourseModal 
+{
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+#manageMaterialsModal
+{
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+#deleteCourseModal
+{
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
 }
 
-#next:hover{background-color: #ff0000;}
-
-/*.container{display: none;}*/
-
-#prev{
-    background-color: #000000;
-    color: #fff;
-    padding: auto;
-    transition-duration: 0.4s;
-}
-
-#prev:hover{background-color: #ff0000;}
-
-.fileLabel{
-    width: auto;
-}
-.buttonStyle{
-    width: auto;
-    top: 10px;
-    position: relative;
-    left: 40%;
-}
-
-#featuredCourses, #enrolledCourses{ display: block;}
-
-a:hover{color: goldenrod;}
-
-.prevP{width: auto;}
-
-.quizzButton{
-    width: auto;
-    top: 10px;
-    position: relative;
-    left: 40%;
-}
-
-.finish{
-    width: auto;
-    top: auto;
-    float: inline-end;
-}
