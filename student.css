@@ -8,6 +8,8 @@
 
 #next:hover{background-color: #ff0000;}
 
+.container{display: none;}
+
 #prev{
     background-color: #000000;
     color: #fff;
@@ -27,7 +29,7 @@
     left: 40%;
 }
 
-#courses, #enrolledCourses{ display: block;}
+#featuredCourses, #enrolledCourses{ display: block;}
 
 a:hover{color: goldenrod;}
 
@@ -38,4 +40,10 @@ a:hover{color: goldenrod;}
     top: 10px;
     position: relative;
     left: 40%;
+}
+
+.finish{
+    width: auto;
+    top: auto;
+    float: inline-end;
 }

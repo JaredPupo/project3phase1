@@ -1,6 +1,6 @@
 "use strict";
 
-var courses = document.getElementById("courses");
+var featuredCourses = document.getElementById("featuredCourses");
 var enrrolledCourses = document.getElementById("enrolledCourses");
 var classInfo = document.getElementById("classInfo");
 var classEnroll = document.getElementById("classEnroll");
@@ -8,15 +8,15 @@ var quizzInfo = document.getElementById("quizzInfo");
 var assigInfo = document.getElementById("assigInfo");
 var quizzAnswer = document.getElementById("quizzAnswer");
 
-enrrolledCourses.getElementsByClassName("Course1")[0].getElementsByClassName("course")[0].onclick = function () {
+enrrolledCourses.getElementsByClassName("courses")[0].getElementsByClassName("course1")[0].onclick = function () {
     classInfo.style.display = "block";
     enrrolledCourses.style.display = "none";
-    courses.style.display = "none";
+    featuredCourses.style.display = "none";
 };
 
-courses.getElementsByClassName("Course1")[0].getElementsByClassName("course")[0].onclick = function () {
+featuredCourses.getElementsByClassName("courses")[0].getElementsByClassName("course1")[0].onclick = function () {
     classEnroll.style.display = "block";
-    courses.style.display = "none";
+    featuredCourses.style.display = "none";
     enrrolledCourses.style.display = "none";
 };
 
@@ -41,12 +41,12 @@ quizzInfo.getElementsByClassName("quizzButton")[0].addEventListener("click", fun
 classInfo.getElementsByClassName("prevP")[0].addEventListener("click", function () {
     classInfo.style.display = "none";
     enrrolledCourses.style.display = "block";
-    courses.style.display = "block";
+    featuredCourses.style.display = "block";
 });
 
 classEnroll.getElementsByClassName("prevP")[0].addEventListener("click", function () {
     classEnroll.style.display = "none";
-    courses.style.display = "block";
+    featuredCourses.style.display = "block";
     enrrolledCourses.style.display = "block";
 });
 
