@@ -4,7 +4,13 @@
 let courses = [];
 
 document.getElementById('submitCourse').addEventListener('click', function() {
-    const courseTitle = document.getElementById('courseTitle').value;
+
+    const courseTitle = document.getElementById('courseTitle').value.trim();
+    if (!courseTitle) {
+        alert('Course title cannot be empty.');
+        return;
+    }
+
     const courseDescription = document.getElementById('courseDescription').value;
     const coursePassword = document.getElementById('coursePassword').value;
 
@@ -152,19 +158,93 @@ function displayCourses() {
         courseList.appendChild(courseElem);
     });
 }
+// Add functionality to open the 'Add Course' modal
 document.querySelector('.container li:nth-child(1) a').addEventListener('click', function(e) {
-    e.preventDefault();  // Prevent the default action (navigation)
+    e.preventDefault();
     document.getElementById('addCourseModal').style.display = 'block';
 });
 
+// Add functionality to open the 'Edit Course' modal
 document.querySelector('.container li:nth-child(2) a').addEventListener('click', function(e) {
     e.preventDefault();
     document.getElementById('editCourseModal').style.display = 'block';
 });
 
+// Add functionality to close modals when the close button is clicked
 document.querySelectorAll('.close').forEach(closeButton => {
     closeButton.addEventListener('click', function() {
-        this.parentElement.parentElement.style.display = 'none';  // Close the modal
+        this.parentElement.parentElement.style.display = 'none';
     });
 });
 
+// This function updates the dropdown of courses.
+function updateCourseDropdown() {
+    const dropdown = document.getElementById('selectedCourse');
+    dropdown.innerHTML = "";  // Clear the list first
+
+    courses.forEach((course, index) => {
+        const option = document.createElement('option');
+        option.value = index;
+        option.textContent = course.title;
+        dropdown.appendChild(option);
+    });
+}
+
+// When a course is added...
+document.getElementById('submitCourse').addEventListener('click', function() {
+    const courseTitle = document.getElementById('courseTitle').value.trim();
+    const courseDescription = document.getElementById('courseDescription').value.trim();
+
+    if (!courseTitle || !courseDescription) {
+        alert('Both course title and description are required.');
+        return;
+    }
+
+    const newCourse = {
+        title: courseTitle,
+        description: courseDescription,
+        materials: []
+    };
+
+    courses.push(newCourse);
+    localStorage.setItem('courses', JSON.stringify(courses));
+    alert("Course added successfully!");
+
+    updateCourseDropdown();  // Update dropdown with new course
+
+    // Close the add course modal
+    document.getElementById('addCourseModal').style.display = 'none';
+});
+
+// When material is edited...
+function editMaterial(index) {
+    const material = courses[0].materials[index];
+    const newName = prompt("Enter the new name for the material:", material.name);
+    const newLink = prompt("Enter the new link for the material:", material.link);
+
+    if (newName) material.name = newName;
+    if (newLink) material.link = newLink;
+
+    localStorage.setItem('courses', JSON.stringify(courses));
+    displayCourseMaterials();
+}
+
+// When material is deleted...
+function deleteMaterial(index) {
+    courses[0].materials.splice(index, 1);
+    localStorage.setItem('courses', JSON.stringify(courses));
+    displayCourseMaterials();
+}
+
+// When material is edited...
+function editMaterial(index) {
+    const material = courses[0].materials[index];
+    const newName = prompt("Enter the new name for the material:", material.name);
+    const newLink = prompt("Enter the new link for the material:", material.link);
+
+    if (newName) material.name = newName;
+    if (newLink) material.link = newLink;
+
+    localStorage.setItem('courses', JSON.stringify(courses));
+    displayCourseMaterials();
+}
