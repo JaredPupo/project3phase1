@@ -20,7 +20,7 @@ h2 {
 }
 
 .container {
-    display: none;
+    /*display: none;*/
     max-width: 500px;
     margin: 0 auto;
     padding: 20px;

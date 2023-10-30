@@ -19,6 +19,79 @@
             
     </div>
 
+    <!-- Add Course Modal (hidden by default) -->
+    <div id="addCourseModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add New Course</h2>
+            <label for="courseTitle">Course Title:</label>
+            <input type="text" id="courseTitle">
+            <label for="courseDescription">Course Description:</label>
+            <textarea id="courseDescription"></textarea>
+            <label for="coursePassword">Enrollment Password:</label>
+            <input type="password" id="coursePassword">
+            <button id="submitCourse">Add Course</button>
+        </div>
+    </div>
+    
+        <!-- Edit Course Modal (hidden by default) -->
+    <div id="editCourseModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Edit Course</h2>
+            <label for="editCourseTitle">Course Title:</label>
+            <input type="text" id="editCourseTitle">
+            <label for="editCourseDescription">Course Description:</label>
+            <textarea id="editCourseDescription"></textarea>
+            <button id="saveCourseChanges">Save Changes</button>
+        </div>
+    </div>
+    
+    <!-- Students Progress Section -->
+    <div class="container">
+        <h2>Students' Progress</h2>
+        <div id="studentsProgressList">
+        <!-- List students and their progress here -->
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Messages</h2>
+        <div id="messagesList">
+            <!-- Display messages from students here -->
+        </div>
+        <textarea id="teacherResponse" placeholder="Write your response..."></textarea>
+        <button id="sendResponseBtn">Send Response</button>
+    </div>
+
+    <!-- Manage Course Materials Modal (hidden by default) -->
+    <div id="manageMaterialsModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Manage Course Materials</h2>
+        
+        <label for="materialName">Material Name:</label>
+        <input type="text" id="materialName">
+        
+        <label for="materialLink">Material Link:</label>
+        <input type="text" id="materialLink">
+
+        <button id="addMaterialBtn">Add Material</button>
+        
+        <h3>Existing Materials:</h3>
+        <div id="existingMaterials">
+        <!-- Display the list of existing materials here -->
+        </div>
+    </div>
+    </div>
+
+    <label for="selectedCourse">Select Course:</label>
+    <select id="selectedCourse"></select>
+
+    <div id="courseList"></div>
+
+    <button id="deleteCourse">Delete Course</button>
+
     <script src="tlogout.js"></script>
 </body>
 </html>
